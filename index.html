@@ -1,82 +1,149 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
+
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yousse_Labib_finalproject_dom</title>
-    <link rel=stylesheet href=./public/css/app.css>
+    <link rel="stylesheet" href="./public/css/app.css">
 </head>
+
 <body>
 
-    <!-- top infos section -->
-    <section id="top-infos">
+    <!-- header -->
+    <header id="header">
 
-    </section>
+        <!-- top infos section -->
+        <section id="top-infos">
+            <div class="ti-left">
+                <div class="ti-mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                    </svg>
+                    <a href="https://discord.gg/dX3y7Tbt87">contact@example.com</a>
+                </div>
 
-    <!-- navbar section -->
-    <section id="navbar">
+                <div class="ti-number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-phone" viewBox="0 0 16 16">
+                        <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                    </svg>
+                    <a href="">+1 5589 55488 55</a>
+                </div>
+            </div>
 
-    </section>
+            <div class="ti-right">
+                <p class="ti-colored">En</p>
+                <p>/</p>
+                <a href="">De</a>
+            </div>
+        </section>
 
-    <!-- home section -->
-    <section id="home">
+        <!-- navbar section -->
+        <section id="navbar">
+            <div class="n-left">
+                <a href="">Restaurantly</a>
+            </div>
 
-    </section>
+
+            <div class="n-middle-parent">
+                <button id="menuClose" class="n-close" aria-label="Close navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                </button>
+                <nav class="n-middle" id="mobileNav">
+
+                    <a href="#home" class="n-items">Home</a>
+                    <a href="#about" class="n-items">About</a>
+                    <a href="#menu" class="n-items">Menu</a>
+                    <a href="#specials" class="n-items">Specials</a>
+                    <a href="#events" class="n-items">Events</a>
+                    <a href="#chefs" class="n-items">Chefs</a>
+                    <a href="#gallery" class="n-items">Gallery</a>
+                    <a href="#dropdown" class="n-items">Dropdown</a>
+                    <a href="#contact" class="n-items">Contact</a>
+                </nav>
+            </div>
+
+            <div class="n-right">
+                <button class="btn">BOOK A TABLE</button>
+                <button id="menuOpen" class="n-open" aria-label="Open navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- home section -->
+        <section id="home"></section>
+    </header>
 
     <!-- about section -->
     <section id="about">
 
     </section>
 
-    <!-- why-us -->
+    <!-- why us section -->
     <section id="why-us">
 
     </section>
 
-    <!-- menu -->
+    <!-- menu section -->
     <section id="menu">
 
     </section>
 
-    <!-- specials -->
+    <!-- specials section -->
     <section id="specials">
 
     </section>
 
-    <!-- events -->
+    <!-- events section -->
     <section id="events">
 
     </section>
 
-    <!-- reservation -->
+    <!-- reservation section -->
     <section id="reservation">
 
     </section>
 
-    <!-- testimonials -->
+    <!-- testimonials section -->
     <section id="testimonials">
 
     </section>
 
-    <!-- gallery -->
+    <!-- gallery section -->
     <section id="gallery">
 
     </section>
 
-    <!-- team -->
+    <!-- team section -->
     <section id="team">
 
     </section>
 
-    <!-- contact us -->
+    <!-- contact section -->
     <section id="contact">
 
     </section>
 
-    <!-- footer -->
+    <!-- footer section -->
     <footer id="footer">
 
     </footer>
     
+    <script src="./public/js/app.js"></script>
 </body>
+
 </html>

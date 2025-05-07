@@ -1,4 +1,274 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
+@font-face {
+  font-family: "Playfair";
+  src: url("../../public/fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto_Condensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/fonts/Poppins-Regular.ttf");
+}
+body {
+  height: 500vh;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../public/images/hero-bg.jpg);
+  background-size: 95.1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#header #top-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 0.7rem;
+  gap: 40rem;
+  font-family: "Roboto", sans-serif;
+}
+#header #top-infos .ti-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(205, 164, 94);
+  gap: 1.5rem;
+}
+#header #top-infos .ti-left .ti-mail svg {
+  width: 0.9rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -3px;
+}
+#header #top-infos .ti-left .ti-mail a {
+  color: rgb(204, 206, 206);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+#header #top-infos .ti-left .ti-mail a:hover {
+  color: rgb(205, 164, 94);
+  text-decoration: underline;
+}
+#header #top-infos .ti-left .ti-number svg {
+  width: 0.9rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -3px;
+}
+#header #top-infos .ti-left .ti-number a {
+  color: rgb(204, 206, 206);
+  text-decoration: none;
+}
+#header #top-infos .ti-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(204, 206, 206);
+  gap: 0.5rem;
+}
+#header #top-infos .ti-right a {
+  color: rgb(204, 206, 206);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+#header #top-infos .ti-right a:hover {
+  color: rgb(205, 164, 94);
+}
+#header #top-infos .ti-right .ti-colored {
+  color: rgb(205, 164, 94);
+}
+#header .n-close {
+  display: none;
+}
+
+#navbar {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 10.4vh;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+#navbar .n-left a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-family: "Playfair", sans-serif;
+}
+#navbar .n-right .btn {
+  background-color: transparent;
+  color: rgb(204, 206, 206);
+  border: solid 2px rgb(205, 164, 94);
+  border-radius: 1rem;
+  width: 9rem;
+  height: 2.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#navbar .n-right .btn:hover {
+  background-color: rgb(205, 164, 94);
+}
+#navbar .n-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#navbar .n-middle .n-items {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  transition: 0.2s ease-in-out;
+}
+#navbar .n-middle .n-items.active {
+  color: rgb(205, 164, 94) !important;
+}
+#navbar .n-middle .n-items:hover {
+  color: rgb(205, 164, 94);
+}
+#navbar #menu {
+  display: none;
+}
+#navbar .n-open,
+#navbar .n-close {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  z-index: 200;
+}
+
+.closeNav {
+  position: fixed;
+  display: block !important;
+  left: 90vw;
+  top: 4vh;
+  fill: rgb(255, 255, 255);
+  z-index: 666;
+}
+
+@media (max-width: 480px) {
+  #header {
+    background-size: 75rem !important;
+  }
+  #top-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0 !important;
+    padding-top: 1rem !important;
+  }
+  #top-infos .ti-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #top-infos .ti-left .ti-mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem !important;
+  }
+  #top-infos .ti-left .ti-mail svg {
+    vertical-align: none !important;
+    display: inline-block;
+    margin-top: -14px !important;
+  }
+  #top-infos .ti-left .ti-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem !important;
+  }
+  #top-infos .ti-left .ti-number svg {
+    vertical-align: none !important;
+    display: inline-block;
+    margin-top: -14px !important;
+  }
+  #top-infos .ti-left .ti-number a {
+    margin-top: -12px !important;
+  }
+  #top-infos .ti-right {
+    display: none !important;
+  }
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding-inline: 1rem;
+    width: 100vw !important;
+  }
+  #navbar .n-right .btn {
+    display: none;
+  }
+  #navbar .n-left {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  #navbar .n-open {
+    display: block;
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+    background: none;
+    border: none;
+    padding-right: 2rem;
+  }
+  #navbar .n-middle-parent .n-middle {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    top: 10vh;
+    width: 80%;
+    height: 78vh;
+    background: #29261f;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.5rem 1.5rem;
+    gap: 1.5rem;
+    transition: 0.4s;
+    z-index: 150;
+    border-radius: 5px;
+  }
+  #navbar .n-middle-parent .n-middle .n-items {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: "Poppins", sans-serif;
+    transition: color 0.2s;
+  }
+  #navbar .n-middle-parent .n-middle .n-items.active {
+    color: rgb(205, 164, 94) !important;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,306 @@
+body {
+    height: 500vh;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../public/images/hero-bg.jpg);
+    background-size: 95.1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    #top-infos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-block: 0.7rem;
+        gap: 40rem;
+        font-family: $secondary-font;
+
+        .ti-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $beta;
+            gap: 1.5rem;
+
+            .ti-mail {
+                svg {
+                    width: 0.9rem;
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-top: -3px;
+                }
+
+                a {
+                    color: $neutral;
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-bottom: 1rem;
+                    transition: 0.3s ease-in-out;
+                    letter-spacing: 1px;
+                }
+
+                a:hover {
+                    color: $beta;
+                    text-decoration: underline;
+                }
+            }
+
+            .ti-number {
+                svg {
+                    width: 0.9rem;
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-top: -3px;
+                }
+
+                a {
+                    color: $neutral;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .ti-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $neutral;
+            gap: 0.5rem;
+
+            a {
+                color: $neutral;
+                text-decoration: none;
+                transition: 0.3s ease-in-out;
+            }
+
+            a:hover {
+                color: $beta;
+            }
+
+            .ti-colored {
+                color: $beta;
+            }
+        }
+    }
+
+    .n-close {
+        display: none;
+    }
+}
+
+#navbar {
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 10.4vh;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+
+    .n-left {
+        a {
+            color: $alpha;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36px;
+            font-family: $primary-font;
+        }
+    }
+
+    .n-right {
+        .btn {
+            background-color: transparent;
+            color: $neutral;
+            border: solid 2px $beta;
+            border-radius: 1rem;
+            width: 9rem;
+            height: 2.2rem;
+            font-family: $secondary-font;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: $beta;
+        }
+    }
+
+    .n-middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .n-items {
+            color: $alpha;
+            text-decoration: none;
+            font-family: $teritiary-font;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            transition: 0.2s ease-in-out;
+
+            &.active {
+                color: $beta !important;
+            }
+        }
+
+        .n-items:hover {
+            color: $beta;
+        }
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .n-open,
+    .n-close {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $alpha;
+        z-index: 200;
+    }
+}
+
+.closeNav {
+    position: fixed;
+    display: block !important;
+    left: 90vw;
+    top: 4vh;
+    fill: $alpha;
+    z-index: 666;
+}
+
+@media (max-width: 480px) {
+    #header {
+        background-size: 75rem !important;
+    }
+
+    #top-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 0 !important;
+        padding-top: 1rem !important;
+
+        .ti-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .ti-mail {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.2rem !important;
+
+                svg {
+                    vertical-align: none !important;
+                    display: inline-block;
+                    margin-top: -14px !important;
+                }
+
+            }
+
+            .ti-number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.2rem !important;
+
+                svg {
+                    vertical-align: none !important;
+                    display: inline-block;
+                    margin-top: -14px !important;
+                }
+
+                a {
+                    margin-top: -12px !important;
+                }
+
+            }
+        }
+
+        .ti-right {
+            display: none !important;
+        }
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 !important;
+        padding-inline: 1rem;
+        width: 100vw !important;
+
+        .n-right {
+            .btn {
+                display: none;
+            }
+        }
+
+        .n-left {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .n-open {
+            display: block;
+            font-size: 2.2rem;
+            color: $alpha;
+            background: none;
+            border: none;
+            padding-right: 2rem;
+        }
+
+        .n-middle-parent {
+            .n-middle {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                top: 10vh;
+                width: 80%;
+                height: 78vh;
+                background: #29261f;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 1.5rem 1.5rem;
+                gap: 1.5rem;
+                transition: 0.4s;
+                z-index: 150;
+                border-radius: 5px;
+
+                .n-items {
+                    color: $alpha;
+                    font-size: 17px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    font-family: $teritiary-font;
+                    transition: color 0.2s;
+
+                    &.active {
+                        color: $beta !important;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,5 +1,11 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$primary-font: 'Playfair', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+$teritiary-font: 'Poppins', sans-serif;
 
 $alpha: rgb(255, 255, 255);
 $beta: rgb(205, 164, 94);
@@ -7,31 +13,3 @@ $neutral: rgb(204, 206, 206);
 $s-neutral: rgb(95, 93, 91);
 $bg: rgb(12, 11, 9);
 $s-bg: rgb(25, 24, 21);
-
-$custom-colors: (
-    "alpha": $alpha,
-    "beta": $beta,
-    "neutral": $neutral,
-    "s-neutral": $s-neutral,
-    "s-bg": $s-bg,
-    "bg": $bg,
-);
-
-$theme-colors: map-merge($custom-colors , $theme-colors );
-
-$spacer: 0.5rem;
-
-@for $i from 1 through 50 {
-  $spacers: map-merge($spacers, ($i : $spacer * $i) );
-}
-
-$rounded: 40px;
-$rectangle: 10px;
-$small: 5px;
-$circle: 50%;
-// $box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-// $s-box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 600px 250px;
-
-
-// $border: 0.5px solid rgba(135, 135, 135, 0);
-// $s-border: 1px solid rgb(232, 117, 50);
