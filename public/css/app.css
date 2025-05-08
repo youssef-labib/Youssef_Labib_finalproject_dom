@@ -1144,5 +1144,65 @@
     width: 50vw !important;
   }
 }
+#testimonials {
+  background-color: #0c0b09;
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media (max-width: 480px) {
+  .top-left-title {
+    padding-left: 1rem;
+  }
+}
+#gallery {
+  background-color: #0c0b09;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+#gallery .g-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+#gallery .g-main .g-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2px;
+}
+#gallery .g-main .g-img-container img {
+  width: 24.2vw;
+  height: 37vh;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+#gallery .g-main img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  #gallery {
+    height: 335vh;
+  }
+  #gallery .top-left-title {
+    padding-left: 1rem;
+  }
+  #gallery .g-main .g-img-container {
+    flex-direction: column;
+  }
+  #gallery .g-main .g-img-container img {
+    width: 95vw;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

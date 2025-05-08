@@ -1,0 +1,13 @@
+#testimonials {
+    background-color: #0c0b09;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+@media (max-width: 480px) {
+        .top-left-title {
+            padding-left: 1rem;
+        }
+    }
