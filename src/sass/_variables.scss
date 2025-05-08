@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -21,6 +22,37 @@
 
 .btn:hover {
     background-color: rgb(205, 164, 94);
+}
+
+.top-left-title {
+    padding-top: 4rem;
+    padding-left: 8.3rem;
+
+    h2 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1px;
+        letter-spacing: 1.5px;
+        color: rgb(204, 206, 206);
+        position: relative;
+        font-family: 'Playfair', sans-serif;
+    }
+
+    h2::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background-color: rgb(205, 164, 94);
+        margin: 4px 10px;
+    }
+
+    p {
+        color: rgb(205, 164, 94);
+        font-family: 'Playfair', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+    }
 }
 
 $primary-font: 'Playfair', sans-serif;

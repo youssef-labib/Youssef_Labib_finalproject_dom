@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -21,6 +22,34 @@
 
 .btn:hover {
   background-color: rgb(205, 164, 94);
+}
+
+.top-left-title {
+  padding-top: 4rem;
+  padding-left: 8.3rem;
+}
+.top-left-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1px;
+  letter-spacing: 1.5px;
+  color: rgb(204, 206, 206);
+  position: relative;
+  font-family: "Playfair", sans-serif;
+}
+.top-left-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background-color: rgb(205, 164, 94);
+  margin: 4px 10px;
+}
+.top-left-title p {
+  color: rgb(205, 164, 94);
+  font-family: "Playfair", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 @font-face {
@@ -672,6 +701,90 @@
   }
   #about .a-left {
     width: 90vw;
+  }
+}
+body {
+  height: 500vh;
+}
+
+#why-us {
+  background-color: #0c0b09;
+  height: 67vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+#why-us .wu-benefits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#why-us .wu-benefits .wu-card {
+  background-color: rgb(25, 24, 21);
+  width: 26.3vw;
+  height: 35vh;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 3rem;
+  padding-inline: 2rem;
+}
+#why-us .wu-benefits .wu-card span {
+  color: rgb(205, 164, 94);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 29px;
+  font-family: "Roboto", sans-serif;
+}
+#why-us .wu-benefits .wu-card h4 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  font-family: "Playfair", sans-serif;
+  color: rgb(255, 255, 255);
+}
+#why-us .wu-benefits .wu-card p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(95, 93, 91);
+}
+#why-us .wu-benefits .wu-card:hover {
+  background-color: rgb(205, 164, 94);
+}
+#why-us .wu-benefits .wu-card:hover span {
+  transition: 0.2s ease-in-out;
+  transform: translateY(-10px);
+  color: rgb(25, 24, 21);
+}
+#why-us .wu-benefits .wu-card:hover h4 {
+  transition: 0.2s ease-in-out;
+  transform: translateY(-10px);
+  color: rgb(25, 24, 21);
+}
+#why-us .wu-benefits .wu-card:hover p {
+  transition: 0.2s ease-in-out;
+  transform: translateY(-10px);
+  color: rgb(25, 24, 21);
+}
+
+@media (max-width: 480px) {
+  #why-us {
+    height: 150vh;
+  }
+  #why-us .top-left-title {
+    padding-left: 1rem;
+  }
+  #why-us .wu-benefits {
+    flex-direction: column;
+  }
+  #why-us .wu-benefits .wu-card {
+    width: 95vw;
   }
 }
 
