@@ -409,7 +409,7 @@
   border: 1px solid #555;
   padding: 10px;
   border-radius: 6px;
-  width: 97.6%;
+  width: 100%;
 }
 .backdrop .modal .m-body .form input:focus,
 .backdrop .modal .m-body .form textarea:focus {
@@ -423,6 +423,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+  padding-block: 1rem;
 }
 .backdrop .modal .m-body .form .m-bottom .btn-modal {
   background-color: transparent;
@@ -678,6 +679,10 @@
   height: 28.3rem;
   padding: 0.5rem;
   transition: 0.3s ease-in-out;
+}
+#about .a-right .a-img-container img {
+  width: 37.2rem;
+  height: 27.3rem;
 }
 #about .a-right .a-img-container:hover {
   transform: scale(1.05);
@@ -1054,6 +1059,89 @@
   #specials .s-main .s-right-dishes .s-right-dish .srd-right img {
     width: 24rem !important;
     height: 24rem !important;
+  }
+}
+#events {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../public/images/events-bg.jpg);
+  background-size: 95.1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 1.5rem;
+}
+
+#reservation {
+  background-color: #0c0b09;
+  height: 78vh;
+}
+#reservation .r-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#reservation .r-form .form {
+  padding-top: 5rem;
+  width: 80vw;
+}
+#reservation .r-form .form .row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+#reservation .r-form .form input,
+#reservation .r-form .form textarea {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(85, 85, 85, 0.4156862745);
+  padding: 10px;
+  border-radius: 2px;
+  width: 100%;
+}
+#reservation .r-form .form input:focus,
+#reservation .r-form .form textarea:focus {
+  border: 1px solid rgb(205, 164, 94);
+}
+#reservation .r-form .form textarea {
+  height: 100px;
+  margin-bottom: 10px;
+}
+#reservation .r-form .form .footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+#reservation .r-form .form .footer .btn {
+  width: 14vw;
+  height: 8vh;
+  border-radius: 7rem;
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  #reservation {
+    height: 97vh;
+  }
+  .top-left-title {
+    padding-left: 1rem;
+  }
+  .form {
+    padding-top: 3rem !important;
+  }
+  .form .row {
+    flex-direction: column !important;
+  }
+  .form input,
+  .form textarea {
+    width: 95% !important;
+  }
+  .form .footer .btn {
+    width: 50vw !important;
   }
 }
 
