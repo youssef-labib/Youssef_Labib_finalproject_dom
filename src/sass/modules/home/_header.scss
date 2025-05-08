@@ -115,28 +115,6 @@ body {
         }
     }
 
-    .n-right {
-        .btn {
-            background-color: transparent;
-            color: $neutral;
-            border: solid 2px $beta;
-            border-radius: 1rem;
-            width: 9rem;
-            height: 2.2rem;
-            font-family: $secondary-font;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: $beta;
-        }
-    }
-
     .n-middle {
         display: flex;
         align-items: center;
@@ -177,6 +155,292 @@ body {
     }
 }
 
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34rem;
+    padding-top: 33vh;
+
+    .h-left {
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: left;
+
+        h1 {
+            color: $alpha;
+            font-family: $primary-font;
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 700;
+
+            span {
+                color: $beta;
+            }
+        }
+
+        p {
+            font-family: $secondary-font;
+            color: $neutral;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 400;
+        }
+
+        .h-btns {
+            .btn {
+                color: $alpha !important;
+                height: 2.5rem !important;
+                width: 30%;
+                border-radius: 2rem;
+            }
+        }
+    }
+
+    .h-right {
+        padding-right: 11rem;
+
+        a {
+            color: $beta;
+            transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: $alpha;
+        }
+
+        .close-btn,
+        #close-carousel {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+            background: #232323;
+            color: $alpha;
+            border: none;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+            transition: opacity 0.2s, background 0.2s;
+        }
+
+        .close-btn:hover,
+        #close-carousel:hover {
+            opacity: 1;
+            background: $beta;
+            color: $alpha;
+        }
+
+        .carousel-container {
+            width: 92vw;
+            height: 92vh;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #29261f;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+            padding: 1rem 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -40rem;
+            margin-top: -17rem;
+            z-index: 999;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 0 0.5rem;
+        }
+
+        .slide>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .next-btn,
+        .previous-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #29261f;
+            color: $alpha;
+            border: none;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+            z-index: 10;
+            transition: background 0.2s, color 0.2s;
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .next-btn:hover,
+        .previous-btn:hover {
+            background: $beta;
+            color: $alpha;
+            opacity: 1;
+        }
+
+        .next-btn {
+            right: 1rem;
+        }
+
+        .previous-btn {
+            left: 1rem;
+        }
+    }
+}
+
+
+.modal-btn {
+    padding: 12px 24px;
+    margin: 20px;
+    background: transparent;
+    border: 2px solid $beta;
+    color: $beta;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .modal {
+        background-color: #111111;
+        width: 60vw;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        overflow: hidden;
+
+        .header {
+            padding: 20px;
+            background-color: #111111;
+            border-bottom: 1px solid $s-neutral;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $beta;
+            font-family: $primary-font;
+            font-size: 18px;
+
+            .btn-close {
+                background-color: #111111;
+                border: none;
+                color: $beta;
+                cursor: pointer;
+            }
+        }
+
+        .title {
+            padding: 20px;
+            color: $beta;
+            font-size: 32px;
+            font-family: $primary-font;
+        }
+
+        .m-body {
+            padding: 1rem;
+
+            .form {
+                .row {
+                    display: flex;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                }
+
+                input,
+                textarea {
+                    background: #0a0a0a;
+                    color: white;
+                    border: 1px solid #555;
+                    padding: 10px;
+                    border-radius: 6px;
+                    width: 97.6%;
+                }
+
+                input:focus,
+                textarea:focus {
+                    border: 1px solid $beta;
+                }
+
+                textarea {
+                    height: 100px;
+                    margin-bottom: 10px;
+                }
+
+                .m-bottom {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+
+                    .btn-modal {
+                        background-color: transparent;
+                        color: rgb(204, 206, 206);
+                        border: solid 2px rgb(205, 164, 94);
+                        border-radius: 1rem;
+                        width: 9rem;
+                        height: 2.2rem;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 14px;
+                        line-height: 21px;
+                        font-weight: 400;
+                        letter-spacing: 0.5px;
+                        transition: 0.3s ease-in-out;
+                        cursor: pointer;
+                    }
+                    
+                    .btn-modal:hover {
+                        background-color: rgb(205, 164, 94);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .closeNav {
     position: fixed;
     display: block !important;
@@ -214,7 +478,6 @@ body {
                     display: inline-block;
                     margin-top: -14px !important;
                 }
-
             }
 
             .ti-number {
@@ -232,7 +495,6 @@ body {
                 a {
                     margin-top: -12px !important;
                 }
-
             }
         }
 
@@ -272,7 +534,6 @@ body {
         .n-middle-parent {
             .n-middle {
                 position: fixed;
-                top: 0;
                 right: -100%;
                 top: 10vh;
                 width: 80%;
@@ -299,7 +560,89 @@ body {
                         color: $beta !important;
                     }
                 }
+            }
+        }
+    }
 
+    #home {
+        gap: 4rem;
+        padding-top: 8rem;
+        flex-direction: column;
+
+        .h-left {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            h1 {
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+            }
+
+            .h-btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+                .btn {
+                    width: 10rem;
+                }
+            }
+        }
+
+        .h-right {
+            a {
+                padding-left: 9rem;
+            }
+
+            .carousel-parent {
+                .carousel-container {
+                    width: 98vw !important;
+                    height: 55vh !important;
+                    margin-left: 0 !important;
+                    margin-top: 0 !important;
+                    padding: 0.5rem !important;
+                    border-radius: 8px !important;
+
+                    .carousel {
+                        .slide {
+                            iframe {
+                                width: 370px !important;
+                                height: 300px !important;
+                            }
+
+                            img {
+                                width: 370px !important;
+                                height: 300px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        width: 100vw !important;
+
+        .m-body {
+            .form {
+                .row {
+                    flex-direction: column !important;
+                }
+
+                input,
+                textarea {
+                    width: 95% !important;
+                }
             }
         }
     }

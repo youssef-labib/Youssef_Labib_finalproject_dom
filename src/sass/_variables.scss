@@ -3,6 +3,26 @@
     padding: 0;
 }
 
+.btn {
+    background-color: transparent;
+    color: rgb(204, 206, 206);
+    border: solid 2px rgb(205, 164, 94);
+    border-radius: 1rem;
+    width: 9rem;
+    height: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(205, 164, 94);
+}
+
 $primary-font: 'Playfair', sans-serif;
 $secondary-font: 'Roboto', sans-serif;
 $teritiary-font: 'Poppins', sans-serif;

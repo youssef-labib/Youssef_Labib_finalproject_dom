@@ -3,6 +3,26 @@
   padding: 0;
 }
 
+.btn {
+  background-color: transparent;
+  color: rgb(204, 206, 206);
+  border: solid 2px rgb(205, 164, 94);
+  border-radius: 1rem;
+  width: 9rem;
+  height: 2.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(205, 164, 94);
+}
+
 @font-face {
   font-family: "Playfair";
   src: url("../../public/fonts/PlayfairDisplay-Regular.ttf");
@@ -113,24 +133,6 @@ body {
   line-height: 36px;
   font-family: "Playfair", sans-serif;
 }
-#navbar .n-right .btn {
-  background-color: transparent;
-  color: rgb(204, 206, 206);
-  border: solid 2px rgb(205, 164, 94);
-  border-radius: 1rem;
-  width: 9rem;
-  height: 2.2rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-#navbar .n-right .btn:hover {
-  background-color: rgb(205, 164, 94);
-}
 #navbar .n-middle {
   display: flex;
   align-items: center;
@@ -163,6 +165,257 @@ body {
   cursor: pointer;
   color: rgb(255, 255, 255);
   z-index: 200;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34rem;
+  padding-top: 33vh;
+}
+#home .h-left {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+#home .h-left h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Playfair", sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 700;
+}
+#home .h-left h1 span {
+  color: rgb(205, 164, 94);
+}
+#home .h-left p {
+  font-family: "Roboto", sans-serif;
+  color: rgb(204, 206, 206);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+#home .h-left .h-btns .btn {
+  color: rgb(255, 255, 255) !important;
+  height: 2.5rem !important;
+  width: 30%;
+  border-radius: 2rem;
+}
+#home .h-right {
+  padding-right: 11rem;
+}
+#home .h-right a {
+  color: rgb(205, 164, 94);
+  transition: 0.3s ease-in-out;
+}
+#home .h-right a:hover {
+  color: rgb(255, 255, 255);
+}
+#home .h-right .close-btn,
+#home .h-right #close-carousel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: #232323;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s, background 0.2s;
+}
+#home .h-right .close-btn:hover,
+#home .h-right #close-carousel:hover {
+  opacity: 1;
+  background: rgb(205, 164, 94);
+  color: rgb(255, 255, 255);
+}
+#home .h-right .carousel-container {
+  width: 92vw;
+  height: 92vh;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #29261f;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -40rem;
+  margin-top: -17rem;
+  z-index: 999;
+}
+#home .h-right .carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s;
+}
+#home .h-right .slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+#home .h-right .slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+#home .h-right .next-btn,
+#home .h-right .previous-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #29261f;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home .h-right .next-btn:hover,
+#home .h-right .previous-btn:hover {
+  background: rgb(205, 164, 94);
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+#home .h-right .next-btn {
+  right: 1rem;
+}
+#home .h-right .previous-btn {
+  left: 1rem;
+}
+
+.modal-btn {
+  padding: 12px 24px;
+  margin: 20px;
+  background: transparent;
+  border: 2px solid rgb(205, 164, 94);
+  color: rgb(205, 164, 94);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.backdrop .modal {
+  background-color: #111111;
+  width: 60vw;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
+}
+.backdrop .modal .header {
+  padding: 20px;
+  background-color: #111111;
+  border-bottom: 1px solid rgb(95, 93, 91);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(205, 164, 94);
+  font-family: "Playfair", sans-serif;
+  font-size: 18px;
+}
+.backdrop .modal .header .btn-close {
+  background-color: #111111;
+  border: none;
+  color: rgb(205, 164, 94);
+  cursor: pointer;
+}
+.backdrop .modal .title {
+  padding: 20px;
+  color: rgb(205, 164, 94);
+  font-size: 32px;
+  font-family: "Playfair", sans-serif;
+}
+.backdrop .modal .m-body {
+  padding: 1rem;
+}
+.backdrop .modal .m-body .form .row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.backdrop .modal .m-body .form input,
+.backdrop .modal .m-body .form textarea {
+  background: #0a0a0a;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 6px;
+  width: 97.6%;
+}
+.backdrop .modal .m-body .form input:focus,
+.backdrop .modal .m-body .form textarea:focus {
+  border: 1px solid rgb(205, 164, 94);
+}
+.backdrop .modal .m-body .form textarea {
+  height: 100px;
+  margin-bottom: 10px;
+}
+.backdrop .modal .m-body .form .m-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.backdrop .modal .m-body .form .m-bottom .btn-modal {
+  background-color: transparent;
+  color: rgb(204, 206, 206);
+  border: solid 2px rgb(205, 164, 94);
+  border-radius: 1rem;
+  width: 9rem;
+  height: 2.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.backdrop .modal .m-body .form .m-bottom .btn-modal:hover {
+  background-color: rgb(205, 164, 94);
 }
 
 .closeNav {
@@ -243,7 +496,6 @@ body {
   }
   #navbar .n-middle-parent .n-middle {
     position: fixed;
-    top: 0;
     right: -100%;
     top: 10vh;
     width: 80%;
@@ -268,6 +520,64 @@ body {
   }
   #navbar .n-middle-parent .n-middle .n-items.active {
     color: rgb(205, 164, 94) !important;
+  }
+  #home {
+    gap: 4rem;
+    padding-top: 8rem;
+    flex-direction: column;
+  }
+  #home .h-left {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #home .h-left h1 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  #home .h-left p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  #home .h-left .h-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #home .h-left .h-btns .btn {
+    width: 10rem;
+  }
+  #home .h-right a {
+    padding-left: 9rem;
+  }
+  #home .h-right .carousel-parent .carousel-container {
+    width: 98vw !important;
+    height: 55vh !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding: 0.5rem !important;
+    border-radius: 8px !important;
+  }
+  #home .h-right .carousel-parent .carousel-container .carousel .slide iframe {
+    width: 370px !important;
+    height: 300px !important;
+  }
+  #home .h-right .carousel-parent .carousel-container .carousel .slide img {
+    width: 370px !important;
+    height: 300px !important;
+  }
+  .modal {
+    width: 100vw !important;
+  }
+  .modal .m-body .form .row {
+    flex-direction: column !important;
+  }
+  .modal .m-body .form input,
+  .modal .m-body .form textarea {
+    width: 95% !important;
   }
 }
 

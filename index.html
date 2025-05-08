@@ -73,7 +73,41 @@
             </div>
 
             <div class="n-right">
-                <button class="btn">BOOK A TABLE</button>
+                <button id="booktable" class="btn booktable" my-attribute="modal1">BOOK A TABLE</button>
+
+                <div class="backdrop">
+                    <div id="modal1" class="modal">
+                        <div class="header">
+                            <h2>Reservation</h2>
+                            <button class="btn-close" id="close-carousel" title="Close"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg></button>
+                        </div>
+                        <div class="m-body">
+                            <h1 class="title">Book a Table</h1>
+                            <form class="form">
+                                <div class="row">
+                                    <input type="text" placeholder="Your Name" required>
+                                    <input type="email" placeholder="Your Email" required>
+                                    <input type="tel" placeholder="Your Phone" required>
+                                </div>
+                                <div class="row">
+                                    <input type="date" required>
+                                    <input type="time" required>
+                                    <input type="number" placeholder="# of people" required>
+                                </div>
+                                <textarea placeholder="Message"></textarea>
+                                <div class="m-bottom">
+                                    <button type="button" class="btn-modal btn-close">Cancel</button>
+                                    <button type="submit" class="btn-modal">Book a Table</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <button id="menuOpen" class="n-open" aria-label="Open navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
@@ -85,7 +119,104 @@
         </section>
 
         <!-- home section -->
-        <section id="home"></section>
+        <section id="home">
+            <div class="h-left">
+                <h1>Welcome to <span>Restaurantly</span></h1>
+                <p>Delivering great food for more than 18 years!</p>
+                <div class="h-btns">
+                    <button class="btn">OUR MENU</button>
+                    <button id="booktable" class="btn booktable" my-attribute="modal1">BOOK A TABLE</button>
+
+                    <div class="backdrop">
+                        <div id="modal1" class="modal">
+                            <div class="header">
+                                <h2>Reservation</h2>
+                                <span class="btn-close">X</span>
+                            </div>
+                            <div class="body">
+                                <h1 class="title">Book a Table</h1>
+                                <form class="form">
+                                    <div class="row">
+                                        <input type="text" placeholder="Your Name" required>
+                                        <input type="email" placeholder="Your Email" required>
+                                        <input type="tel" placeholder="Your Phone" required>
+                                    </div>
+                                    <div class="row">
+                                        <input type="date" required>
+                                        <input type="time" required>
+                                        <input type="number" placeholder="# of people" required>
+                                    </div>
+                                    <textarea placeholder="Message"></textarea>
+                                    <div class="footer">
+                                        <button type="button" class="btn-close">Cancel</button>
+                                        <button type="submit">Book a Table</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-right">
+                <a id="show-carousel" href=""><svg xmlns="http://www.w3.org/2000/svg" width="75" height="75"
+                        fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                    </svg></a>
+
+                <div class="carousel-parent">
+                    <div id="carousel1" class="carousel-container" style="display: none; position: relative;">
+                        <button class="close-btn" id="close-carousel" title="Close"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg></button>
+                        <div class="carousel">
+                            <div class="slide">
+                                <iframe width="1200" height="600"
+                                    src="https://www.youtube.com/embed/Y7f98aduVJ8?si=Lndifd5KCcOL4JUZ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-2.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-3.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-4.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-5.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-6.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="./public/images/gallery-7.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <button carousel-target="carousel1" class="next-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg></button>
+                        <button carousel-target="carousel1" class="previous-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                            </svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </header>
 
     <!-- about section -->
@@ -142,7 +273,7 @@
     <footer id="footer">
 
     </footer>
-    
+
     <script src="./public/js/app.js"></script>
 </body>
 
