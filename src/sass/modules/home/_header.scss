@@ -1,6 +1,6 @@
-body {
-    height: 500vh;
-}
+// body {
+//     height: 500vh;
+// }
 
 #header {
     position: relative;
@@ -201,7 +201,7 @@ body {
     }
 
     .h-right {
-        padding-right: 11rem;
+        align-self: left !important;
 
         a {
             color: $beta;
@@ -423,7 +423,7 @@ body {
                         border-radius: 1rem;
                         width: 9rem;
                         height: 2.2rem;
-                        font-family: 'Roboto', sans-serif;
+                        font-family: $secondary-font;
                         font-size: 14px;
                         line-height: 21px;
                         font-weight: 400;
@@ -453,6 +453,7 @@ body {
 @media (max-width: 480px) {
     #header {
         background-size: 75rem !important;
+        height: 85vh;
     }
 
     #top-infos {

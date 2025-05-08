@@ -35,10 +35,6 @@
   font-family: "Poppins";
   src: url("../../public/fonts/Poppins-Regular.ttf");
 }
-body {
-  height: 500vh;
-}
-
 #header {
   position: relative;
   width: 100%;
@@ -206,7 +202,7 @@ body {
   border-radius: 2rem;
 }
 #home .h-right {
-  padding-right: 11rem;
+  align-self: left !important;
 }
 #home .h-right a {
   color: rgb(205, 164, 94);
@@ -430,6 +426,7 @@ body {
 @media (max-width: 480px) {
   #header {
     background-size: 75rem !important;
+    height: 85vh;
   }
   #top-infos {
     display: flex;
@@ -578,6 +575,103 @@ body {
   .modal .m-body .form input,
   .modal .m-body .form textarea {
     width: 95% !important;
+  }
+}
+#about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(14, 13, 11, 0.9), rgba(0, 0, 0, 0.5)), url(../../../../public/images/about-bg.jpg);
+  background-size: 95.1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 1.5rem;
+}
+#about .a-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40vw;
+  text-align: left;
+}
+#about .a-left .a-title h1 {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  font-family: "Playfair", sans-serif;
+}
+#about .a-left .a-title p {
+  color: rgb(95, 93, 91);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+#about .a-left .a-list ul {
+  list-style-type: none;
+}
+#about .a-left .a-list ul li {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 0.5rem;
+}
+#about .a-left .a-list ul li svg {
+  color: rgb(205, 164, 94);
+  width: 20px;
+  height: 20px;
+}
+#about .a-left .a-list ul li span {
+  color: rgb(204, 206, 206);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+}
+#about .a-left .a-parag p {
+  color: rgb(204, 206, 206);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+#about .a-right .a-img-container {
+  background-color: #33302d;
+  width: 38.2rem;
+  height: 28.3rem;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+#about .a-right .a-img-container:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  #about {
+    flex-direction: column-reverse;
+    height: 120vh;
+  }
+  #about .a-right .a-img-container {
+    background-color: #33302d;
+    width: 22rem;
+    height: 14rem;
+    padding: 0.5rem;
+    transition: 0.3s ease-in-out;
+  }
+  #about .a-right .a-img-container img {
+    width: 22rem;
+    height: 14rem;
+  }
+  #about .a-left {
+    width: 90vw;
   }
 }
 
