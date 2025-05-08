@@ -1,19 +1,19 @@
 //~ Navbar Menu
-let openNav = document.querySelector('.n-open')
-let navbar = document.querySelector('.n-middle')
-let myBody = document.querySelector('body')
-let closeNav = document.querySelector('.n-close')
+let openNav = document.querySelector(".n-open")
+let navbar = document.querySelector(".n-middle")
+let myBody = document.querySelector("body")
+let closeNav = document.querySelector(".n-close")
 
-openNav.addEventListener('click', function () {
-    navbar.style.left = '5vw'
-    myBody.classList.add('overflow')
-    closeNav.classList.add('closeNav')
+openNav.addEventListener("click", function () {
+    navbar.style.left = "5vw"
+    myBody.classList.add("overflow")
+    closeNav.classList.add("closeNav")
 })
 
-closeNav.addEventListener('click', function () {
-    navbar.style.left = '-200%'
-    myBody.classList.remove('overflow')
-    closeNav.classList.remove('closeNav')
+closeNav.addEventListener("click", function () {
+    navbar.style.left = "-200%"
+    myBody.classList.remove("overflow")
+    closeNav.classList.remove("closeNav")
 })
 
 //^--------------------------------------------------------------------- 
@@ -123,3 +123,21 @@ for (let i = 0; i < buttons.length; i++) {
 
 //^--------------------------------------------------------------------- 
 
+//~ Menu Filter
+let filterButtons = document.querySelectorAll(".m-filter a")
+let filterableItems = document.querySelectorAll(".m-items .m-item")
+
+let filterItems = e => {
+    document.querySelector(".m-filter-a-active").classList.remove("m-filter-a-active")
+    e.target.classList.add("m-filter-a-active")
+
+    filterableItems.forEach(item => {
+        item.classList.add("m-hide")
+
+        if (item.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+            item.classList.remove("m-hide")
+        }
+    })
+}
+
+filterButtons.forEach(button => button.addEventListener("click", filterItems))

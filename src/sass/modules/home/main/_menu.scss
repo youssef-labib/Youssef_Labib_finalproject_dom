@@ -1,0 +1,168 @@
+#menu {
+    background-color: $s-bg;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    .m-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+
+        .m-filter {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 1rem;
+
+            a {
+                color: $neutral;
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 550;
+                font-family: $primary-font;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $beta;
+            }
+
+            .m-filter-a-active {
+                color: $beta;
+            }
+        }
+
+        .m-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            .m-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                max-width: 40rem;
+                width: 100%;
+
+                .m-left-img {
+                    background-color: #292826;
+                    border-radius: 50%;
+                    padding: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 5rem;
+                        border-radius: 50%;
+                        display: block;
+                    }
+                }
+
+                .m-right-menu {
+                    padding-bottom: 2rem;
+                    width: 100%;
+
+                    .m-menu-content {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+
+                        .m-title {
+                            color: $alpha;
+                            background-color: #0c0b09;
+                            position: relative;
+                            z-index: 3;
+                            font-weight: 700;
+                            transition: 0.3s;
+                            text-decoration: none;
+                            font-family: $secondary-font;
+                            font-size: 16px;
+                            line-height: 24px;
+                            letter-spacing: 1px;
+                            white-space: nowrap;
+                            margin-right: 0.5rem;
+
+                            &:hover {
+                                color: $beta;
+                            }
+                        }
+
+                        .m-dots {
+                            flex: 1;
+                            border-bottom: 2px dotted #b3b3b3;
+                            height: 0;
+                            margin: 0 10px;
+                            position: relative;
+                            top: -2px;
+                        }
+
+                        .m-price {
+                            color: $beta;
+                            background-color: #0c0b09;
+                            position: relative;
+                            z-index: 3;
+                            padding: 0 10px;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: $secondary-font;
+                            white-space: nowrap;
+                            margin: 0;
+                        }
+                    }
+
+                    .m-menu-ingerdients {
+                        color: $s-neutral;
+                        font-family: $teritiary-font;
+                        font-style: italic;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-top: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m-item.m-hide {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    #menu {
+        .m-items {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-direction: column !important;
+
+            .m-item {
+                padding-left: 0.5rem;
+
+                .m-right-menu {
+                    width: 100%;
+
+                    .m-menu-content {
+                        align-items: flex-start !important;
+                        gap: 0.5rem !important;
+
+                        .m-dots {
+                            display: none;
+                        }
+
+                        .m-price {
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
