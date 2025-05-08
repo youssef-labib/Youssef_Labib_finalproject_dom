@@ -1,0 +1,121 @@
+#team {
+    background-color: #0c0b09;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    .t-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        .chef {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.2rem;
+            width: 27vw;
+            height: 57vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 26rem;
+            padding: 1.5rem;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+        
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 50%;
+                background: linear-gradient(to top, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0) 100%);
+                opacity: 0;
+                transition: opacity 0.4s;
+                z-index: 1;
+                pointer-events: none;
+            }
+        
+            .t-none {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.4s, visibility 0.4s;
+                z-index: 2;
+                position: relative;
+            }
+        
+            &:hover::after {
+                opacity: 1;
+            }
+            &:hover .t-none {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            h1 {
+                color: $alpha;
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            p {
+                color: $alpha;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 20px;
+                padding-bottom: 1rem;
+            }
+
+            .t-socials {
+                color: $alpha;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+
+                svg:hover {
+                    color: $beta
+                }
+            }
+        }
+
+        .left-chef {
+            background-image: url(../../../../../public/images/chefs-1.jpg);
+        }
+
+        .middle-chef {
+            background-image: url(../../../../../public/images/chefs-2.jpg);
+        }
+
+        .right-chef {
+            background-image: url(../../../../../public/images/chefs-3.jpg);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #team {
+        height: 210vh;
+        .top-left-title {
+            padding-left: 1rem;
+        }
+
+        .t-main {
+            flex-direction: column;
+
+            .chef {
+                width: 95vw;
+            }
+        }
+    }
+}

@@ -1204,5 +1204,112 @@
     width: 95vw;
   }
 }
+#team {
+  background-color: #0c0b09;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+#team .t-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#team .t-main .chef {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  width: 27vw;
+  height: 57vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 26rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+#team .t-main .chef::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 70%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 1;
+  pointer-events: none;
+}
+#team .t-main .chef .t-none {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+  z-index: 2;
+  position: relative;
+}
+#team .t-main .chef:hover::after {
+  opacity: 1;
+}
+#team .t-main .chef:hover .t-none {
+  opacity: 1;
+  visibility: visible;
+}
+#team .t-main .chef h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Playfair", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+#team .t-main .chef p {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  padding-bottom: 1rem;
+}
+#team .t-main .chef .t-socials {
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+#team .t-main .chef .t-socials svg:hover {
+  color: rgb(205, 164, 94);
+}
+#team .t-main .left-chef {
+  background-image: url(../../../../../public/images/chefs-1.jpg);
+}
+#team .t-main .middle-chef {
+  background-image: url(../../../../../public/images/chefs-2.jpg);
+}
+#team .t-main .right-chef {
+  background-image: url(../../../../../public/images/chefs-3.jpg);
+}
+
+@media (max-width: 480px) {
+  #team {
+    height: 210vh;
+  }
+  #team .top-left-title {
+    padding-left: 1rem;
+  }
+  #team .t-main {
+    flex-direction: column;
+  }
+  #team .t-main .chef {
+    width: 95vw;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */
