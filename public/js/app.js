@@ -16,7 +16,30 @@ closeNav.addEventListener("click", function () {
     closeNav.classList.remove("closeNav")
 })
 
-//^--------------------------------------------------------------------- 
+function setActive(elements, activeClass, current) {
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove(activeClass)
+    }
+    current.classList.add(activeClass)
+}
+
+//^---------------------------------------------------------------------
+
+//~ Navbar Active Link
+let navbarLinks = document.querySelectorAll("#navbar .n-items")
+for (let i = 0; i < navbarLinks.length; i++) {
+    navbarLinks[i].classList.remove("active")
+}
+if (navbarLinks.length > 0) {
+    navbarLinks[0].classList.add("active")
+}
+for (let i = 0; i < navbarLinks.length; i++) {
+    navbarLinks[i].addEventListener("click", function () {
+        setActive(navbarLinks, "active", this)
+    })
+}
+
+//^---------------------------------------------------------------------
 
 //~ Carousel 
 let nextBtns = document.querySelectorAll(".next-btn")
@@ -87,7 +110,7 @@ closeCarouselBtn.addEventListener("click", function () {
     showCarouselBtn.style.display = "inline"
 })
 
-//^--------------------------------------------------------------------- 
+//^---------------------------------------------------------------------
 
 //~ Modal
 let buttons = document.querySelectorAll(".booktable")
@@ -121,23 +144,60 @@ for (let i = 0; i < buttons.length; i++) {
     })
 }
 
-//^--------------------------------------------------------------------- 
+//^---------------------------------------------------------------------
 
 //~ Menu Filter
 let filterButtons = document.querySelectorAll(".m-filter a")
 let filterableItems = document.querySelectorAll(".m-items .m-item")
 
-let filterItems = e => {
-    document.querySelector(".m-filter-a-active").classList.remove("m-filter-a-active")
-    e.target.classList.add("m-filter-a-active")
+function filterItems(e) {
+    setActive(filterButtons, "m-filter-a-active", this)
 
-    filterableItems.forEach(item => {
+    for (let i = 0; i < filterableItems.length; i++) {
+        let item = filterableItems[i]
         item.classList.add("m-hide")
-
-        if (item.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+        if (item.dataset.name === this.dataset.name || this.dataset.name === "all") {
             item.classList.remove("m-hide")
+        }
+    }
+}
+
+for (let i = 0; i < filterButtons.length; i++) {
+    filterButtons[i].addEventListener("click", filterItems)
+}
+
+//^---------------------------------------------------------------------
+
+//~ Specials Filter 
+let specialsFilterBtns = document.querySelectorAll(".s-left-filter .filter-btn")
+let specialsDishes = document.querySelectorAll(".s-right-dishes .s-right-dish")
+
+for (let i = 0; i < specialsFilterBtns.length; i++) {
+    specialsFilterBtns[i].addEventListener("click", function () {
+        for (let j = 0; j < specialsFilterBtns.length; j++) {
+            specialsFilterBtns[j].classList.remove("s-btn-active")
+        }
+        this.classList.add("s-btn-active")
+
+        let name = this.getAttribute("data-name")
+        for (let k = 0; k < specialsDishes.length; k++) {
+            let dish = specialsDishes[k]
+            if (dish.getAttribute("data-name") === name) {
+                dish.style.display = "flex"
+            } else {
+                dish.style.display = "none"
+            }
         }
     })
 }
 
-filterButtons.forEach(button => button.addEventListener("click", filterItems))
+for (let i = 0; i < specialsDishes.length; i++) {
+    if (i === 0) {
+        specialsDishes[i].style.display = "flex"
+    } else {
+        specialsDishes[i].style.display = "none"
+    }
+}
+
+//^---------------------------------------------------------------------
+

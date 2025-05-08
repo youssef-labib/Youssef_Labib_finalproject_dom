@@ -25,6 +25,7 @@
                 font-weight: 550;
                 font-family: $primary-font;
                 text-decoration: none;
+                cursor: pointer;
             }
 
             a:hover {
@@ -137,6 +138,9 @@
 
 @media (max-width: 480px) {
     #menu {
+        .top-left-title {
+            padding-left: 1rem;
+        }
         .m-items {
             display: flex !important;
             align-items: center !important;

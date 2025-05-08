@@ -1,0 +1,152 @@
+#specials {
+    background-color: #0c0b09;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .s-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        padding-inline: 8.5rem;
+
+        .s-left-filter {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            flex-direction: column;
+            width: 18rem;
+
+            .filter-btn {
+                height: 3.5rem;
+                width: 21vw;
+                background-color: transparent;
+                color: $alpha;
+                border: none;
+                text-align: left;
+                border-right: solid 1px $beta;
+                transition: 0.2s ease-in-out;
+                font-size: 15px;
+                line-height: 23px;
+                font-family: $secondary-font;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                padding-left: 1rem;
+            }
+
+            .filter-btn:hover {
+                color: $beta;
+                border-right: solid 1px $alpha;
+            }
+
+            .filter-btn:focus {
+                color: #0c0b09;
+                background-color: $beta;
+                border-right: solid 1px $alpha;
+            }
+
+            .s-btn-active {
+                color: #0c0b09;
+                background-color: $beta;
+                border-right: solid 1px $alpha;
+            }
+        }
+
+        .s-right-dishes {
+
+            .s-right-dish {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .srd-left {
+                    display: flex;
+                    align-items: left;
+                    justify-content: center;
+                    text-align: left;
+                    align-self: left;
+                    gap: 2rem;
+                    flex-direction: column;
+                    width: 39vw;
+
+                    h1 {
+                        color: $alpha;
+                        font-size: 26px;
+                        line-height: 31px;
+                        font-weight: 600;
+                        font-family: $primary-font;
+                    }
+
+                    span {
+                        color: $s-neutral;
+                        font-style: italic;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        font-family: $secondary-font;
+                    }
+
+                    p {
+                        color: $s-neutral;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        font-family: $secondary-font;
+                    }
+                }
+
+                .srd-right {
+                    img {
+                        width: 18rem;
+                        height: 18rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #specials {
+        height: 170vh;
+
+        .top-left-title {
+            padding-left: 1rem;
+        }
+
+        .s-main {
+            flex-direction: column;
+
+            .s-left-filter {
+                padding-top: 1rem;
+                width: 100vw !important;
+                align-self: center !important;
+                align-items: center !important;
+
+                .filter-btn {
+                    width: 90vw;
+                }
+            }
+
+            .s-right-dishes {
+                .s-right-dish {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+
+                    .srd-left {
+                        width: 95vw;
+                    }
+
+                    .srd-right {
+                        img {
+                            width: 24rem !important;
+                            height: 24rem !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
