@@ -1,0 +1,143 @@
+#contact {
+    background-color: $s-bg;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    .c-map {
+        iframe {
+            width: 99vw;
+        }
+    }
+
+    .contact-main {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        padding-inline: 5rem;
+
+        .c-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: flex-start; // Align all children to the left
+
+            .cl-info {
+                display: flex;
+                align-items: flex-start; // Align icon and text to the top
+                gap: 1rem;
+
+                img {
+                    width: 2.8em;
+                    height: 2.8rem;
+                    border-radius: 4px;
+                }
+
+                .cl-info-txt {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+                    align-items: flex-start; // Align text to the left
+
+                    h1 {
+                        color: $alpha;
+                        font-family: $primary-font;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    p {
+                        color: $neutral;
+                        font-family: $secondary-font;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+
+        .c-form {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .form {
+                padding-top: 2rem;
+                width: 55vw;
+
+                .row {
+                    display: flex;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                    color: rgb(110, 85, 42);
+                }
+
+                input,
+                textarea {
+                    background: #12120f;
+                    color: rgb(110, 85, 42);
+                    border: 1px solid rgb(110, 85, 42);
+                    ;
+                    padding: 13px;
+                    border-radius: 2px;
+                    width: 100%;
+                }
+
+                input:focus,
+                textarea:focus {
+                    border: 1px solid $beta;
+                }
+
+                textarea {
+                    height: 100px;
+                    margin-bottom: 10px;
+                }
+
+                .footer {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 1rem;
+
+                    .btn {
+                        width: 12vw;
+                        height: 6vh;
+                        border-radius: 7rem;
+                        font-size: 16px;
+                    }
+                }
+
+                input::placeholder,
+                textarea::placeholder {
+                    color: rgb(110, 85, 42);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        height: 203vh;
+
+        .top-left-title {
+            padding-left: 1rem;
+        }
+
+        .contact-main {
+            flex-direction: column;
+            padding-inline: 1rem;
+
+            .c-form {
+
+                .form {
+                    padding-top: 0 !important;
+                    width: 100vw;
+                }
+            }
+        }
+    }
+}

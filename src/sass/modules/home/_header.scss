@@ -249,7 +249,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: -40rem;
+            margin-left: -67rem;
             margin-top: -17rem;
             z-index: 999;
         }
@@ -269,7 +269,7 @@
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
-            padding: 0 0.5rem;
+
         }
 
         .slide>img {
@@ -441,7 +441,7 @@
 .closeNav {
     position: fixed;
     display: block !important;
-    left: 90vw;
+    left: 89vw;
     top: 4vh;
     fill: $alpha;
     z-index: 666;
@@ -534,8 +534,8 @@
                 position: fixed;
                 right: -100%;
                 top: 10vh;
-                width: 80%;
-                height: 78vh;
+                width: 90%;
+                height: 80vh;
                 background: #29261f;
                 flex-direction: column;
                 align-items: flex-start;
