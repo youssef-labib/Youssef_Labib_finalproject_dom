@@ -1427,5 +1427,272 @@
     width: 100vw;
   }
 }
+#footer {
+  background-color: #0c0b09;
+  height: 68vh;
+  padding-inline: 6rem;
+  color: rgb(255, 255, 255) !important;
+}
+#footer .f-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+#footer .f-top .ft-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 3.5rem;
+}
+#footer .f-top .ft-left .ftl-contact {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#footer .f-top .ft-left .ftl-contact h1 {
+  font-family: "Playfair", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-location {
+  color: rgb(204, 206, 206);
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-location p {
+  font-family: "Playfair", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-contact {
+  color: rgb(204, 206, 206);
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-contact p {
+  font-family: "Playfair", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-contact p span {
+  font-weight: 700;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-socials {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-socials svg {
+  border: solid 1px rgb(95, 93, 91);
+  border-radius: 50%;
+  color: rgb(95, 93, 91);
+  transition: 0.3s ease-in-out;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+#footer .f-top .ft-left .ftl-contact .ftlc-socials svg:hover {
+  color: rgb(205, 164, 94);
+  border-color: rgb(205, 164, 94);
+}
+#footer .f-top .ft-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7rem;
+}
+#footer .f-top .ft-right .ftl-list {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#footer .f-top .ft-right .ftl-list h1 {
+  font-weight: 700;
+  font-family: "Playfair", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+#footer .f-top .ft-right .ftl-list .ftll-lc {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#footer .f-top .ft-right .ftl-list .ftll-lc a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: rgb(95, 93, 91);
+  transition: 0.3s ease-in-out;
+}
+#footer .f-top .ft-right .ftl-list .ftll-lc a:hover {
+  color: rgb(205, 164, 94);
+}
+#footer .f-top .ft-right .ftl-newsletter {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  width: 27vw;
+  gap: 2rem;
+}
+#footer .f-top .ft-right .ftl-newsletter h1 {
+  font-weight: 700;
+  font-family: "Playfair", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+#footer .f-top .ft-right .ftl-newsletter p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(204, 206, 206);
+}
+#footer .f-top .ft-right .ftl-newsletter .newsletter-input {
+  display: flex;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgb(95, 93, 91);
+  background: transparent;
+}
+#footer .f-top .ft-right .ftl-newsletter .newsletter-input input[type=email] {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  outline: none;
+}
+#footer .f-top .ft-right .ftl-newsletter .newsletter-input .newsletter-btn {
+  padding: 0 2rem;
+  background: rgb(205, 164, 94);
+  color: #0c0b09;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#footer .f-top .ft-right .ftl-newsletter .newsletter-input .newsletter-btn:hover {
+  background-color: rgb(159, 129, 73);
+}
+#footer .f-bottom {
+  border-top: solid 0.5px rgb(25, 24, 21);
+}
+#footer .f-bottom .fb-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 0.5rem;
+}
+#footer .f-bottom .fb-copyright p {
+  color: rgb(204, 206, 206);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+#footer .f-bottom .fb-copyright p span {
+  font-weight: 700;
+}
+#footer .f-bottom .fb-copyright .s-small-p {
+  font-size: 13px;
+  line-height: 20px;
+}
+#footer .f-bottom .fb-copyright .s-small-p span {
+  font-weight: 400;
+  color: rgb(205, 164, 94);
+}
+
+@media (max-width: 480px) {
+  #footer {
+    height: 140vh;
+    padding-inline: 1rem;
+  }
+  #footer .f-top {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  #footer .f-top .ft-left {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  #footer .f-top .ft-left .ftl-contact {
+    gap: 1rem;
+  }
+  #footer .f-top .ft-left .ftl-contact h1 {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+  #footer .f-top .ft-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    width: 100%;
+  }
+  #footer .f-top .ft-right .ftl-list {
+    width: 100%;
+  }
+  #footer .f-top .ft-right .ftl-list h1 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  #footer .f-top .ft-right .ftl-list .ftll-lc {
+    gap: 0.5rem;
+  }
+  #footer .f-top .ft-right .ftl-list .ftll-lc a {
+    font-size: 0.95rem;
+    line-height: 1.1rem;
+  }
+  #footer .f-top .ft-right .ftl-newsletter {
+    width: 100%;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+  #footer .f-top .ft-right .ftl-newsletter h1 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  #footer .f-top .ft-right .ftl-newsletter p {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+  }
+  #footer .f-bottom .fb-copyright {
+    padding-top: 3rem;
+    gap: 0.3rem;
+  }
+  #footer .f-bottom .fb-copyright p {
+    font-size: 0.95rem;
+    line-height: 1.2rem;
+  }
+  #footer .f-bottom .fb-copyright .s-small-p {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */
