@@ -312,3 +312,20 @@
         }
     }
 }
+
+.to-top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $beta;
+    color: $s-bg;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    z-index: 9999;
+}

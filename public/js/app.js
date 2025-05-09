@@ -215,3 +215,5 @@ indicators.forEach(indicator => {
         indicator.classList.add('active')
     });
 });
+
+//^---------------------------------------------------------------------
